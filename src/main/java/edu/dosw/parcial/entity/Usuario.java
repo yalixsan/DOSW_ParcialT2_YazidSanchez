@@ -32,7 +32,7 @@ public class Usuario {
     @Enumerated(EnumType.STRING)
     private NivelModel nivel;
 
-    @NotBlank
+    @ManyToMany
     @Column(length = 100)
     private List<String> materiasInscritas = new ArrayList<>();
 
