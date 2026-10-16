@@ -1,5 +1,5 @@
 package edu.dosw.parcial.model;
 
-public enum TipoEstadoModel {
+public enum EstadoModel {
     
 }

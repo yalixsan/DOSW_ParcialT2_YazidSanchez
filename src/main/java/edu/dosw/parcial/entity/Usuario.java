@@ -22,7 +22,7 @@ public class Usuario {
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private TipoEstadoModel estado;
+    private EstadoModel estado;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
@@ -34,13 +34,13 @@ public class Usuario {
 
     @ManyToMany
     @Column(length = 100)
-    private List<String> materiasInscritas = new ArrayList<>();
+    private List<Materia> materiasInscritas = new ArrayList<>();
 
     public Usuario() {
     }
 
     public Usuario(String correo, String nombre, String programa,
-         TipoEstadoModel estado, RolModel rol, NivelModel nivel) {
+         EstadoModel estado, RolModel rol, NivelModel nivel) {
         
         this.correo = correo;
         this.nombre = nombre;
@@ -55,7 +55,7 @@ public class Usuario {
         return correo;
     }
 
-    public TipoEstadoModel getEstado() {
+    public EstadoModel getEstado() {
         return estado;
     }
 
@@ -75,7 +75,7 @@ public class Usuario {
         return nivel;
     }
 
-    public List<String> getMateriasInscritas() {
+    public List<Materia> getMateriasInscritas() {
         return materiasInscritas;
     }
 
@@ -83,11 +83,11 @@ public class Usuario {
         this.correo = correo;
     }
 
-    public void setEstado(TipoEstadoModel estado) {
+    public void setEstado(EstadoModel estado) {
         this.estado = estado;
     }
 
-    public void setMateriasInscritas(List<String> materiasInscritas) {
+    public void setMateriasInscritas(List<Materia> materiasInscritas) {
         this.materiasInscritas = materiasInscritas;
     }
 
